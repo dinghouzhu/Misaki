@@ -1,10 +1,10 @@
 <template>
- <div>
+ <div class="Content">
    <div class="lineswitch" v-for="item in MenuList" :key="item.id">
      <span>{{item.name}}是否允许访问:{{item.value}}</span>
      <mt-switch v-model="item.value" @change="turn(item.id,item.value)"></mt-switch>
    </div>
-   <mt-button type="danger" size="large"  @click="submitForm()">退出</mt-button>
+
  </div>
 </template>
 
@@ -34,10 +34,7 @@
               })
           },
 
-        submitForm(){
-            localStorage.clear();
-            this.$router.push('/mulu')
-        },
+
         getMenuList(){
             getJur()
               .then(res=>{
@@ -69,6 +66,7 @@
 </script>
 
 <style scoped>
+
   .mint-switch{
     position: absolute;
     right: 20px;
@@ -76,12 +74,13 @@
     transform: translateY(-50%);
   }
 .lineswitch{
-  width: 100%;
+  width: 95%;
   height: 50px;
   border-top: 2px dashed #f4f4f4;
   position: relative;
   line-height: 50px;
-  margin-left: 10px;
+  margin: 0 auto;
+
 }
   .lineswitch:nth-child(1){
     border: none;

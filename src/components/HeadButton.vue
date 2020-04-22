@@ -17,27 +17,7 @@
          <span class="title">{{item.title}}</span>
         </div>
 
-        <!--<div class="block"></div>-->
-        <!--<div class="block"></div>-->
-        <!--<div class="block"></div>-->
-        <!--<div class="block"></div>-->
-        <!--<div class="block"></div>-->
-        <!--<div class="block"></div>-->
-        <!--<div class="block"></div>-->
       </div>
-
-
-      <!--<div class="search">-->
-        <!--<mt-search v-model="value">-->
-          <!--<mt-cell-->
-            <!--v-if="result"-->
-            <!--v-for="item in result"-->
-            <!--:key="item.id"-->
-            <!--:title="item.title"-->
-            <!--:value="item.value">-->
-          <!--</mt-cell>-->
-        <!--</mt-search>-->
-      <!--</div>-->
 
     </div>
 </template>
@@ -58,37 +38,38 @@
               boo:true,
             },{
               id:1,
-              title:'去登陆',
-              path:'/login',
-              boo:true,
-            },{
-              id:2,
-              title:'超电磁炮',
-              path:'/Misaki',
-              boo:false,
-            },{
-              id:3,
               title:'みさか みこと',
               path:'/Misaki',
               boo:false,
             },{
+              id:2,
+              title:'超电磁炮',
+              path:'/neirong',
+              boo:true,
+            },{
+              id:3,
+              title:'会员专享',
+              path:'/mine',
+              boo:false,
+            },
+              {
               id:4,
               title:'个人主页',
-              path:'/mulu',
-              boo:false,
+              path:'/mine',
+              boo:true,
             },{
               id:5,
               title:'打赏作者',
-              path:'/mulu',
-              boo:false,
+              path:'/wx',
+              boo:true,
             },{
               id:6,
-              title:'测试',
+              title:'更多功能',
               path:'/mulu',
               boo:false,
             },{
               id:7,
-              title:'测试',
+              title:'敬请期待',
               path:'/mulu',
               boo:false,
             },
@@ -108,7 +89,7 @@
         },
 
         misaka(item,path){
-          let token=localStorage.getItem('token')||"";
+
           // if (token) {
           //   this.$router.push(path);
           // }else {

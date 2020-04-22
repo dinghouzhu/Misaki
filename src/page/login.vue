@@ -33,8 +33,8 @@
               .then(res=>{
                 if (res.data.code ===200) {
                   localStorage.setItem('nickname',res.data.data.userInfo.nickname);
-                  localStorage.setItem('token',res.data.data.userInfo.token); //后续功能有用
-                  this.$router.push('/');
+                  //localStorage.setItem('token',res.data.data.userInfo.token); //后续功能有用
+                  this.$router.push('/mulu');
                   console.log('登陆');
                 }else {
                   console.log('222');

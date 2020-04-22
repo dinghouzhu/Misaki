@@ -35,7 +35,8 @@
           <dd class="basicInfo-item value">
             女
           </dd>
-        </dl><dl class="basicInfo-block basicInfo-right">
+        </dl>
+        <dl class="basicInfo-block basicInfo-right">
         <dt class="basicInfo-item name">血&nbsp;&nbsp;&nbsp;&nbsp;型</dt>
         <dd class="basicInfo-item value">
           AB型
@@ -80,7 +81,8 @@
         <dd class="basicInfo-item value">
           第7学区常盘台中学学生寮208号室
         </dd>
-      </dl></div>
+      </dl>
+      </div>
     </div>
 </template>
 
@@ -92,13 +94,12 @@
 
 <style scoped>
   .basic-info {
-
     background-size: 100% 100%;
     border-bottom: 2px dashed #f4f4f4;
-    margin: 20px 0 35px;
+
     *overflow: hidden;
     clear: both;
-    background: url(https://bkssl.bdimg.com/static/wiki-lemma/widget/lemma_content/mainContent/basicInfo/img/basicInfo-bg_ccaff81.png);
+
   }
   .cmn-clearfix {
     *zoom: 1;
@@ -135,7 +136,7 @@
   .basic-info .basicInfo-block .basicInfo-item.value {
     zoom: 1;
     color: #333;
-    width: 285px;
+    width: 250px;
     float: left;
     position: relative;
     word-break: break-all;

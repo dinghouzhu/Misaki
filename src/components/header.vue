@@ -1,9 +1,10 @@
 <template>
- <div>
+ <div class="header">
 
-   <mt-header :title="nickname ? nickname:'某不科学的御坂美琴'">
-     <router-link to="" slot="left">
-       <mt-button icon="back" @click.native="$router.back(-1)">返回</mt-button>
+   <!--<mt-header :title="nickname ? nickname:'某不科学的御坂美琴'">-->
+     <mt-header title="某不科学的御坂美琴">
+     <router-link to="/mulu" slot="left">
+       <mt-button icon="back" >返回</mt-button>
      </router-link>
      <router-link to="/juri" slot="right">
        <mt-button icon="more"></mt-button>
@@ -29,6 +30,8 @@
 
 <style scoped>
   .mint-header{
+    width: 100%;
   background:#fb7299 ;
   }
+
 </style>

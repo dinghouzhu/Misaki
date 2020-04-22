@@ -8,6 +8,8 @@
 export default {
   name: 'App',
 
+
+
 }
 </script>
 
@@ -21,4 +23,5 @@ html,body,#app{
   padding: 0;
 
 }
+
 </style>

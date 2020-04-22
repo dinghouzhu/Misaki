@@ -10,7 +10,7 @@ module.exports = {
     index: path.resolve(__dirname, '../Misaki/index.html'),
     assetsRoot: path.resolve(__dirname, '../Misaki'),
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -60,7 +60,7 @@ module.exports = {
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 

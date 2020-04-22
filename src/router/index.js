@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from "vue-router";
 import Router from 'vue-router'
 import Welcome from '../components/index';
-import NotFound from '../components/notFound';
+import Mulu from '../components/HeadButton';
 
 Vue.use(Router);
 // 重写路由的push方法
@@ -35,7 +35,17 @@ export default new Router({
           component: resolve=>require(['../page/login'],resolve),
           meta:{
             keepAlive:true,
-            title:'跳转页'
+            title:'登录页',
+            index: 0,
+          }
+        },
+        {
+          name:'pay',
+          path:'/wx',
+          component: resolve=>require(['../components/wx'],resolve),
+          meta:{
+            keepAlive:false,
+            title:'打赏',
           }
         },
         {
@@ -44,7 +54,8 @@ export default new Router({
           component: resolve=>require(['../components/Jurisdiction'],resolve),
           meta:{
             keepAlive:true,
-            title:'权限设置'
+            title:'权限设置',
+
           }
         },
         {
@@ -53,28 +64,47 @@ export default new Router({
           component:resolve=>require(['../components/Misaki'],resolve),
           meta:{
             keepAlive:true,
-            title:'Misaki'
+            title:'Misaki',
+            index: 1,
+          }
+        },
+        {
+          name:'Mine',
+          path:'/mine',
+          component:resolve=>require(['../page/Mine'],resolve),
+          meta:{
+            keepAlive:true,
+            title:'个人主页',
+
           }
         },
         {
           name:'mulu',
           path:'/mulu',
-          component:resolve=>require(['../components/HeadButton'],resolve),
+          component:Mulu,
           meta:{
             keepAlive:true,
-            title:'目录页'
+            title:'目录页页',
+            index: 3,
           }
         },
-
-
-
+        {
+          name:'neirong',
+          path:'/neirong',
+          component:resolve=>require(['../page/Neirong'],resolve),
+          meta:{
+            keepAlive:true,
+            title:'内容页',
+            index: 4,
+          }
+        },
       ]
     },
 
     {
       name:'NotFound',
       path: "/404",
-      component: NotFound
+      component:resolve=>require(['../components/notFound'],resolve)
     },
     {
       name:'NotFound',
