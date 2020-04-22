@@ -1,20 +1,70 @@
 <template>
  <div>
-   <div class="lineswitch" v-for="i in 6" :key="i">
-     <span>选项:{{i}}</span>
-     <mt-switch v-model="value"></mt-switch>
+   <div class="lineswitch" v-for="item in MenuList" :key="item.id">
+     <span>{{item.name}}是否允许访问:{{item.value}}</span>
+     <mt-switch v-model="item.value" @change="turn(item.id,item.value)"></mt-switch>
    </div>
+   <mt-button type="danger" size="large"  @click="submitForm()">退出</mt-button>
  </div>
 </template>
 
 <script>
-    export default {
+  import {getJur,updateJur} from "../api";
+  export default {
+      //此页面专为权限管理  设置方面
         name: "Jurisdiction",
-      data(){
+       data(){
           return{
-            value:false
+            MenuList:[
+
+            ],
           }
-      }
+      },
+      methods:{
+          turn(id,value){
+            let Id=id;
+            let Value =value;
+            console.log(typeof Value,Value);
+            updateJur(Id,Value)
+              .then(res=>{
+                console.log(res);
+              })
+              .catch(err=>{
+                console.log(err);
+              })
+          },
+
+        submitForm(){
+            localStorage.clear();
+            this.$router.push('/mulu')
+        },
+        getMenuList(){
+            getJur()
+              .then(res=>{
+
+                var _this=this;
+                res.data.data.res.map(function (item,index) {
+                  _this.MenuList.push(
+                    {
+                      id:item.id,
+                      name:item.name,
+                      value:Boolean(item.value)
+                  });
+                })
+              })
+              .catch(err=>{
+                console.log(err);
+              })
+        }
+      },
+    created(){
+        this.MenuList =[];
+        this.getMenuList()
+    },
+    deactivated(){
+      this.MenuList =[];
+      this.getMenuList()
+    }
     }
 </script>
 

@@ -7,8 +7,8 @@ const path = require('path');
 module.exports = {
   dev: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    index: path.resolve(__dirname, '../Misaki/index.html'),
+    assetsRoot: path.resolve(__dirname, '../Misaki'),
 
     productionSourceMap: true,
     // Paths
@@ -49,10 +49,10 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../Misaki/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../Misaki'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',
 

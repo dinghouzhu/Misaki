@@ -7,7 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     show:false,
-    include:['mulu','HeadButton','Home'],//缓存路由
+    include:['mulu','HeadButton','Home','Jurisdiction'],//缓存路由
     disabled:true,
     menu_collapse:false,
     nickname:localStorage.getItem('nickname')||"",

@@ -78,7 +78,7 @@
               boo:false,
             },{
               id:5,
-              title:'测试',
+              title:'打赏作者',
               path:'/mulu',
               boo:false,
             },{

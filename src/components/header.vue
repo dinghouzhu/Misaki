@@ -18,10 +18,10 @@
         name: "headerBody",
       data(){
           return{
-            nickname:'',
+            nickname:null,
           }
       },
-      mounted(){
+      created(){
           this.nickname=localStorage.getItem('nickname')||''
       }
     }
